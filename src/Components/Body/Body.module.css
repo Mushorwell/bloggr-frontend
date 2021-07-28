@@ -1,0 +1,128 @@
+.blogPreviews{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.bodyContent{
+    padding-bottom: 10rem;
+}
+
+.bodyTitle{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    text-align: left;
+}
+
+.bodyTitle button{
+    all: unset;
+}
+
+.topImageSection{
+    background: linear-gradient(130deg, #282c34, #888888);
+    height: 400px;
+    margin: unset;
+    width: 1366px;
+}
+
+.imageLoadingAnimation {
+    background: linear-gradient(138deg, #282c34, #010101);
+    background-size: 400% 400%;
+
+    -webkit-animation: imageLoad 3s ease infinite;
+    -moz-animation: imageLoad 3s ease infinite;
+    -o-animation: imageLoad 3s ease infinite;
+    animation: imageLoad 3s ease infinite;
+}
+
+@-webkit-keyframes imageLoad {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes imageLoad {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-o-keyframes imageLoad {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes imageLoad {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+.changeForm{
+    color: #282c34;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.form{
+    margin-bottom: 2rem;
+}
+
+.formButton{
+    width: 21rem;
+    padding: .75rem;
+    font-size: 1.25rem;
+    margin: .5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.submitButton{
+    background: #282c34;
+    color: white;
+}
+
+.loginSignIntabs{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 2rem 1rem 0;
+    /*width: 50%;*/
+}
+
+.tabSelected{
+    background: #282c34;
+    color: white;
+}
+
+.searchBar, .textInput{
+    all: unset;
+    border-bottom: 1px solid #888888;
+    font-size: 2rem;
+    width: 20rem;
+}
+
+.register{
+    width: 50%;
+}
+
+.section{
+    box-shadow: 0 0 10px 1px #888888;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 10%;
+    width: 80%;
+}
+
+.textInput{
+    border-bottom-width: 2px;
+    font-size: 1.25rem;
+    margin: .5rem;
+    padding: .5rem;
+    width: 20rem;
+}
+
+.textInput::placeholder{
+    font-size: 1rem;
+}
