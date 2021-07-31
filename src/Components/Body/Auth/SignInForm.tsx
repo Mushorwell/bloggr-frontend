@@ -21,12 +21,14 @@ const SignInForm = ({ switchAuthForm }: authFormProps ): JSX.Element => {
         });
     }
 
+    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+        login(e, signInData);
+    }
+
     return(
         <form
             className={styles.form}
-            onSubmit={
-                (e: React.FormEvent<HTMLFormElement>): void => login(e, signInData)
-            }
+            onSubmit={handleSubmit}
         >
             <div >
                 <input

@@ -9,36 +9,40 @@ const SignUpForm = ({ switchAuthForm }: authFormProps): JSX.Element => {
 
     const [signUpData, setSignUpData]: [ISignUpData, ((value: (((prevState: ISignUpData) => ISignUpData) | ISignUpData)) => void)] = useState<ISignUpData>(
         {
-            confirmPassword: "",
             email: "",
             password: "",
-            username: ""
+            passwordConfirmation:"",
+            name: ""
         }
     )
 
     const clearForm: Function = (): void => {
         setSignUpData({
-            confirmPassword: "",
             email: "",
             password: "",
-            username: ""
+            passwordConfirmation: "",
+            name: ""
         });
+    }
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void =>{
+        register(e, signUpData);
     }
 
     return(
         <form
             className={styles.form}
-            onSubmit={(e:React.FormEvent<HTMLFormElement>) => register(e, signUpData)}
+            onSubmit={handleSubmit}
         >
             <div>
                 <input
                     type="text"
                     className={styles.textInput}
-                    id='username'
-                    name='username'
+                    id='name'
+                    name='name'
                     placeholder='User name'
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSignUpInputChange(e, signUpData, setSignUpData)}
-                    value={signUpData.username}
+                    onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleSignUpInputChange(e, signUpData, setSignUpData)}
+                    value={signUpData.name}
                 />
             </div>
             <div>
@@ -67,11 +71,11 @@ const SignUpForm = ({ switchAuthForm }: authFormProps): JSX.Element => {
                 <input
                     type="password"
                     className={styles.textInput}
-                    id='confirmPassword'
-                    name='confirmPassword'
+                    id='passwordConfirmation'
+                    name='passwordConfirmation'
                     placeholder='Confirm Password'
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => handleSignUpInputChange(e, signUpData, setSignUpData)}
-                    value={signUpData.confirmPassword}
+                    value={signUpData.passwordConfirmation}
                 />
             </div>
             <div>
@@ -96,7 +100,7 @@ const SignUpForm = ({ switchAuthForm }: authFormProps): JSX.Element => {
                     onClick={() => switchAuthForm()}
                 >
                         Sign In
-                    </span>
+                </span>
             </p>
         </form>
     );
