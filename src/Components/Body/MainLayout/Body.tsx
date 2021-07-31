@@ -6,6 +6,7 @@ import Auth from '../Auth/Auth';
 import Home from '../Home/Home';
 import UserBlogs from '../UserBlogs/UserBlogs';
 import Create from '../Create/Create';
+import Blog from "../BlogView/Blog";
 
 const Body = () => {
 
@@ -18,6 +19,9 @@ const Body = () => {
             </div>
             <div className={styles.section}>
                 <Switch>
+                    <Route path="/blogs">
+                        <Blog />
+                    </Route>
                     <Route path="/my_blogs">
                         <UserBlogs />
                     </Route>

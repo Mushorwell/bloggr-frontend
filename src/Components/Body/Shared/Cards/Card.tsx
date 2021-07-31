@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Card.module.css';
 import bodyStyles from '../../MainLayout/Body.module.css';
+import { Link } from 'react-router-dom';
 
 const Card = () => {
     return(
-        <div className={styles.card}>
+        <Link to='blogs' className={styles.card}>
             <div className={`${styles.headerImage} ${bodyStyles.imageLoadingAnimation}`}>
                 <img src='https://picsum.photos/400/200' alt="Theme of the post"/>
             </div>
@@ -25,7 +26,7 @@ const Card = () => {
                     <div>Fire</div><div>Water</div><div>Air</div><div>Earth</div><div>Fire</div><div>Water</div><div>Air</div><div>Earth</div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

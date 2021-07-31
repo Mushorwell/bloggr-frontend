@@ -1,10 +1,10 @@
 import React from 'react';
 import bodyStyles from '../MainLayout/Body.module.css';
 
-const BlogView = (): JSX.Element => {
+const Blog = (): JSX.Element => {
     return (
         <div className={bodyStyles.readView}>
-            <h1>Blog View</h1>
+            <h1 className={bodyStyles.blogBodyText}>Blog View</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -15,4 +15,4 @@ const BlogView = (): JSX.Element => {
     );
 }
 
-export default BlogView;
+export default Blog;

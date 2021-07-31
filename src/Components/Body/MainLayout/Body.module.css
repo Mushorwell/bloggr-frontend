@@ -136,6 +136,15 @@
     width: 100%;
 }
 
+.readView > h1{
+    margin: 1.5rem 15%;
+}
+
+.blogBodyText{
+    line-height: 2.5rem;
+    margin: 2rem 10%;
+}
+
 .createBlogForm{
     display: grid;
     justify-items: center;
