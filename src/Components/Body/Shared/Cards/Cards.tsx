@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import styles from './Body.module.css';
+import styles from '../../MainLayout/Body.module.css';
 
 const Cards = () => {
     return(

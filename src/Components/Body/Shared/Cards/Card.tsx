@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Card.module.css';
-import bodyStyles from './Body.module.css';
+import bodyStyles from '../../MainLayout/Body.module.css';
 
 const Card = () => {
     return(
         <div className={styles.card}>
             <div className={`${styles.headerImage} ${bodyStyles.imageLoadingAnimation}`}>
-                <img src='https://picsum.photos/400/200' alt="Placeholder image"/>
+                <img src='https://picsum.photos/400/200' alt="Theme of the post"/>
             </div>
             <div className={styles.contentPreview}>
                 <div className={styles.title}>
